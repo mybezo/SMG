@@ -12,17 +12,17 @@ public final class SMGItems {
 
     public static final ItemGroup SMG_ITEM_CATEGORY = new ItemGroup(
         new NamespacedKey(SimpleMaterialGenerators.getInstance(), "simplematerialgenerators"),
-        new CustomItemStack(Material.SMOOTH_STONE, "&9简易材料生成器")
+        CustomItemStack.create(Material.SMOOTH_STONE, "&9Simple Material Generators")
     );
 
     public static final SlimefunItemStack SMG_GENERATOR_MULTIBLOCK = new SlimefunItemStack(
         "SMG_GENERATOR_MULTIBLOCK",
         Material.BEDROCK,
-        "&9材料生成器 - 多方块结构",
+        "&9Material Generator - Multiblock",
         "",
-        "&d该附属中的所有材料生成器",
-        "&d都只需要像这样摆放",
-        "&a在上方放置一个箱子即可"
+        "&dEvery material generator in this addon",
+        "&dis set up exactly like this",
+        "&aJust place a chest on top of it"
     );
 	
 	/*	Template for adding more generator items
@@ -30,171 +30,171 @@ public final class SMGItems {
 		"SMG_GENERATOR_",
 		Material.,
 		"& generator",
-		"&6速度: &e t",
+		"&6Speed: &e t",
 		"",
-		"&9&o简易材料生成器"
+		"&9&oSimple Material Generators"
 	);
 	*/
 
     public static final SlimefunItemStack SMG_GENERATOR_COBBLESTONE = new SlimefunItemStack(
         "SMG_GENERATOR_COBBLESTONE",
         Material.COBBLESTONE,
-        "&7圆石生成器",
-        "&6速度: &e4 t",
+        "&7Cobblestone Generator",
+        "&6Speed: &e4 t",
         "",
-        "&9&o简易材料生成器"
+        "&9&oSimple Material Generators"
     );
 
     public static final SlimefunItemStack SMG_GENERATOR_STONE_BROKEN = new SlimefunItemStack(
         "SMG_GENERATOR_STONE_BROKEN",
         Material.STONE,
-        "&7圆石生成器 &8(已损坏)",
-        "&8需要进行修复",
+        "&7Stone Generator &8(Broken)",
+        "&8Needs to be repaired",
         "",
-        "&9&o简易材料生成器"
+        "&9&oSimple Material Generators"
     );
 
     public static final SlimefunItemStack SMG_GENERATOR_STONE = new SlimefunItemStack(
         "SMG_GENERATOR_STONE",
         Material.STONE,
-        "&7石头生成器",
-        "&6速度: &e8 t",
+        "&7Stone Generator",
+        "&6Speed: &e8 t",
         "",
-        "&9&o简易材料生成器"
+        "&9&oSimple Material Generators"
     );
 
     public static final SlimefunItemStack SMG_GENERATOR_SMOOTH_STONE_BROKEN = new SlimefunItemStack(
         "SMG_GENERATOR_SMOOTH_STONE_BROKEN",
         Material.SMOOTH_STONE,
-        "&7平滑石头生成器 &8(已损坏)",
-        "&8需要进行修复",
+        "&7Smooth Stone Generator &8(Broken)",
+        "&8Needs to be repaired",
         "",
-        "&9&o简易材料生成器"
+        "&9&oSimple Material Generators"
     );
 
     public static final SlimefunItemStack SMG_GENERATOR_SMOOTH_STONE = new SlimefunItemStack(
         "SMG_GENERATOR_SMOOTH_STONE",
         Material.SMOOTH_STONE,
-        "&7平滑石头生成器",
-        "&6速度: &e12 t",
+        "&7Smooth Stone Generator",
+        "&6Speed: &e12 t",
         "",
-        "&9&o简易材料生成器"
+        "&9&oSimple Material Generators"
     );
 
     public static final SlimefunItemStack SMG_GENERATOR_GRAVEL_BROKEN = new SlimefunItemStack(
         "SMG_GENERATOR_GRAVEL_BROKEN",
         Material.GRAVEL,
-        "&7沙砾生成器 &8(已损坏)",
-        "&8需要进行修复",
+        "&7Gravel Generator &8(Broken)",
+        "&8Needs to be repaired",
         "",
-        "&9&o简易材料生成器"
+        "&9&oSimple Material Generators"
     );
 
     public static final SlimefunItemStack SMG_GENERATOR_GRAVEL = new SlimefunItemStack(
         "SMG_GENERATOR_GRAVEL",
         Material.ANDESITE,
-        "&7沙砾生成器",
-        "&6速度: &e6 t",
+        "&7Gravel Generator",
+        "&6Speed: &e6 t",
         "",
-        "&9&o简易材料生成器"
+        "&9&oSimple Material Generators"
     );
 
     public static final SlimefunItemStack SMG_GENERATOR_SAND_BROKEN = new SlimefunItemStack(
         "SMG_GENERATOR_SAND_BROKEN",
         Material.SAND,
-        "&e沙子生成器 &8(已损坏)",
-        "&8需要进行修复",
+        "&eSand Generator &8(Broken)",
+        "&8Needs to be repaired",
         "",
-        "&9&o简易材料生成器"
+        "&9&oSimple Material Generators"
     );
 
     public static final SlimefunItemStack SMG_GENERATOR_SAND = new SlimefunItemStack(
         "SMG_GENERATOR_SAND",
         Material.SANDSTONE,
-        "&e沙子生成器",
-        "&6速度: &e8 t",
+        "&eSand Generator",
+        "&6Speed: &e8 t",
         "",
-        "&9&o简易材料生成器"
+        "&9&oSimple Material Generators"
     );
 
     public static final SlimefunItemStack SMG_GENERATOR_GLASS = new SlimefunItemStack(
         "SMG_GENERATOR_GLASS",
         Material.GLASS,
-        "&f玻璃生成器",
-        "&6速度: &e12 t",
+        "&fGlass Generator",
+        "&6Speed: &e12 t",
         "",
-        "&9&o简易材料生成器"
+        "&9&oSimple Material Generators"
     );
 
     public static final SlimefunItemStack SMG_GENERATOR_NETHERRACK = new SlimefunItemStack(
         "SMG_GENERATOR_NETHERRACK",
         Material.NETHERRACK,
-        "&c下界岩生成器",
-        "&6速度: &e6 t",
+        "&cNetherrack Generator",
+        "&6Speed: &e6 t",
         "",
-        "&9&o简易材料生成器"
+        "&9&oSimple Material Generators"
     );
 
     public static final SlimefunItemStack SMG_GENERATOR_SOUL_SAND = new SlimefunItemStack(
         "SMG_GENERATOR_SOUL_SAND",
         Material.SOUL_SAND,
-        "&8灵魂沙生成器",
-        "&6速度: &e8 t",
+        "&8Soul Sand Generator",
+        "&6Speed: &e8 t",
         "",
-        "&9&o简易材料生成器"
+        "&9&oSimple Material Generators"
     );
 
     public static final SlimefunItemStack SMG_GENERATOR_REDSTONE_BADLY_FORMED = new SlimefunItemStack(
         "SMG_GENERATOR_REDSTONE_BADLY_FORMED",
         Material.REDSTONE_BLOCK,
-        "&c红石生成器 &8(错误形式)",
-        "&8我得重新...",
+        "&cRedstone Generator &8(Badly Formed)",
+        "&8I need to rework this...",
         "",
-        "&9&o简易材料生成器"
+        "&9&oSimple Material Generators"
     );
 
     public static final SlimefunItemStack SMG_GENERATOR_REDSTONE_BROKEN = new SlimefunItemStack(
         "SMG_GENERATOR_REDSTONE_BROKEN",
         Material.REDSTONE_BLOCK,
-        "&c红石生成器 &8(已损坏)",
-        "&8需要进行修复",
+        "&cRedstone Generator &8(Broken)",
+        "&8Needs to be repaired",
         "",
-        "&9&o简易材料生成器"
+        "&9&oSimple Material Generators"
     );
 
     public static final SlimefunItemStack SMG_GENERATOR_REDSTONE = new SlimefunItemStack(
         "SMG_GENERATOR_REDSTONE",
         Material.REDSTONE_BLOCK,
-        "&c红石生成器",
-        "&6速度: &e24 t",
+        "&cRedstone Generator",
+        "&6Speed: &e24 t",
         "",
-        "&9&o简易材料生成器"
+        "&9&oSimple Material Generators"
     );
 
     public static final SlimefunItemStack SMG_GENERATOR_OBSIDIAN_BADLY_FORMED = new SlimefunItemStack(
         "SMG_GENERATOR_OBSIDIAN_BADLY_FORMED",
         Material.OBSIDIAN,
-        "&5黑曜石生成器 &8(错误形式)",
-        "&8我得重新...",
+        "&5Obsidian Generator &8(Badly Formed)",
+        "&8I need to rework this...",
         "",
-        "&9&o简易材料生成器"
+        "&9&oSimple Material Generators"
     );
 
     public static final SlimefunItemStack SMG_GENERATOR_OBSIDIAN_BROKEN = new SlimefunItemStack(
         "SMG_GENERATOR_OBSIDIAN_BROKEN",
         Material.OBSIDIAN,
-        "&5黑曜石生成器 &8(已损坏)",
-        "&8需要进行修复",
+        "&5Obsidian Generator &8(Broken)",
+        "&8Needs to be repaired",
         "",
-        "&9&o简易材料生成器"
+        "&9&oSimple Material Generators"
     );
 
     public static final SlimefunItemStack SMG_GENERATOR_OBSIDIAN = new SlimefunItemStack(
         "SMG_GENERATOR_OBSIDIAN",
         Material.OBSIDIAN,
-        "&5黑曜石生成器",
-        "&6速度: &e128 t",
+        "&5Obsidian Generator",
+        "&6Speed: &e128 t",
         "",
-        "&9&o简易材料生成器"
+        "&9&oSimple Material Generators"
     );
 }

@@ -66,7 +66,7 @@ public class MaterialGenerator extends SlimefunItem {
 
                     if (progress >= this.rate.getValue()) {
                         progress = 0;
-                        inv.addItem(this.item);
+                        inv.addItem(this.item.clone());
                     } else {
                         progress++;
                     }

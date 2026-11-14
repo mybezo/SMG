@@ -4,6 +4,7 @@ import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
+import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 
@@ -15,11 +16,11 @@ import javax.annotation.Nonnull;
 
 public class GeneratorMultiblock extends SimpleSlimefunItem<ItemUseHandler> implements NotPlaceable {
 
-    public GeneratorMultiblock(ItemGroup itemGroup , SlimefunItemStack item) {
+    public GeneratorMultiblock(ItemGroup itemGroup, SlimefunItemStack item) {
         super(itemGroup, item, RecipeType.MULTIBLOCK, new ItemStack[] {
                 null, null, null,
                 null, new ItemStack(Material.CHEST), null,
-                null, new CustomItemStack(Material.BEDROCK, "任何材料生成器"), null
+                null, CustomItemStack.create(Material.BEDROCK, "&9Any Material Generator"), null
         });
     }
 
@@ -28,7 +29,7 @@ public class GeneratorMultiblock extends SimpleSlimefunItem<ItemUseHandler> impl
     public ItemUseHandler getItemHandler() {
         return e -> {
             e.cancel();
-            e.getPlayer().sendMessage("这只是一个示例物品，你需要按照配方所示，在世界中摆放材料生成器");
+            e.getPlayer().sendMessage(ChatColor.YELLOW + "This is only an example item. Place a material generator in the world as shown in the recipe.");
         };
     }
 }

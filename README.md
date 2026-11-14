@@ -1,30 +1,49 @@
-# SimpleMaterialGenerators - SMG - 简易材料生成器
+# SimpleMaterialGenerators - SMG
 
-SMG 是一个 Slimefun 附属插件，可以省去一些跑图寻找物品的过程，来通过材料生成器获取这些物品。
+SMG is a Slimefun addon that saves you from exploring the world to collect basic
+materials: material generators produce them for you instead.
 
-## 下载
+## Requirements
 
-[下载 SMG](https://resources.guizhanss.com/plugin/SMG)
+- [Slimefun4](https://github.com/Slimefun/Slimefun4) — built against the latest official
+  build from the `experimental` branch (Minecraft 1.16 – 1.21.x)
+- A Spigot or Paper server supported by that Slimefun build
 
-## 使用
+## Usage
 
-生成器需要在上方放置一个箱子才能工作，这属于多方块结构。
+A generator needs a chest placed directly on top of it to work. This is a multiblock structure.
 
-然后，生成器就会不断生产物品，不需要任何其他操作。
+Once the chest is in place, the generator keeps producing items without any further input.
 
-生成器的**速度**单位是 Slimefun Tick, 在默认情况下，1 t = 0.5 s
+A generator's **speed** is measured in Slimefun ticks. By default, 1 tick = 0.5 seconds.
+Each generator's speed can be changed with the `rate` setting in
+`plugins/Slimefun/Items.yml`.
 
-## 可用的生成器
+## Available generators
 
-目前有以下物品的生成器:
+There are generators for the following items:
 
-- 圆石
-- 石头
-- 平滑石头
-- 沙砾
-- 沙子
-- 玻璃
-- 下界岩
-- 灵魂沙
+- Cobblestone
+- Stone
+- Smooth Stone
+- Gravel
+- Sand
+- Glass
+- Netherrack
+- Soul Sand
+- Redstone
+- Obsidian
 
-后续可能会添加更多。
+More may be added in the future.
+
+## Building
+
+The newest Slimefun builds cannot be fetched from JitPack, so install Slimefun into your
+local Maven repository first, then build the addon:
+
+```sh
+scripts/install-slimefun.sh
+mvn package
+```
+
+The jar is written to `target/`.
