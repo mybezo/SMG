@@ -3,7 +3,6 @@ package me.waleks.simplematerialgenerators;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
 import me.waleks.simplematerialgenerators.items.BrokenGenerator;
-import me.waleks.simplematerialgenerators.items.GeneratorMultiblock;
 import me.waleks.simplematerialgenerators.items.MaterialGenerator;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
@@ -15,8 +14,6 @@ public final class SMGItemSetup {
     private SMGItemSetup() {}
 
     public static void setup(@Nonnull SimpleMaterialGenerators plugin) {
-        new GeneratorMultiblock(SMGItems.SMG_ITEM_CATEGORY, SMGItems.SMG_GENERATOR_MULTIBLOCK).register(plugin);
-
 		/*	Template for adding more items
 		new MaterialGenerator(SMGItems.SMG_ITEM_CATEGORY,
 			SMGItems.SMG_GENERATOR_,

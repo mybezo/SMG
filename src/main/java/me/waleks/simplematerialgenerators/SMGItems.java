@@ -15,16 +15,6 @@ public final class SMGItems {
         new CustomItemStack(Material.SMOOTH_STONE, "&9Simple Material Generators")
     );
 
-    public static final SlimefunItemStack SMG_GENERATOR_MULTIBLOCK = new SlimefunItemStack(
-        "SMG_GENERATOR_MULTIBLOCK",
-        Material.BEDROCK,
-        "&9Material Generator - Multiblock",
-        "",
-        "&dEvery material generator in this addon",
-        "&dis set up exactly like this",
-        "&aJust place a chest on top of it"
-    );
-	
 	/*	Template for adding more generator items
 	public static final SlimefunItemStack SMG_GENERATOR_ = new SlimefunItemStack(
 		"SMG_GENERATOR_",

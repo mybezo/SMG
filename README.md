@@ -15,9 +15,18 @@ SlimefunGuguProject fork.
 
 ## Usage
 
-A generator needs a chest placed directly on top of it to work. This is a multiblock structure.
+Place a generator and it starts producing items right away. No chest or other setup
+is needed.
 
-Once the chest is in place, the generator keeps producing items without any further input.
+Right-click a generator to open its 54-slot inventory. The top row shows the
+generator's progress, and the 45 slots below hold the output. When the output is
+full, the generator pauses until items are taken out.
+
+The output can be taken out by hand, by Slimefun cargo nodes, or by the
+[Networks](https://github.com/SlimefunGuguProject/Networks) addon (for example a
+Network Grabber). Nothing can be inserted into a generator.
+
+Breaking a generator drops the items stored in it.
 
 A generator's **speed** is measured in Slimefun ticks. By default, 1 tick = 0.5 seconds.
 Each generator's speed can be changed with the `rate` setting in
