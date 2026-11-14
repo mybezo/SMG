@@ -244,7 +244,7 @@ public final class SMGItemSetup {
                 new ItemStack(Material.DIRT), new ItemStack(Material.DIRT), new ItemStack(Material.DIRT),
                 SlimefunItems.BRONZE_INGOT, SMGItems.SMG_GENERATOR_GRAVEL, SlimefunItems.BRONZE_INGOT,
                 new ItemStack(Material.DIRT), SlimefunItems.COMPOSTER, new ItemStack(Material.DIRT)
-            }, 6)
+            }, 20)
             .setItem(Material.DIRT)
             .register(plugin);
 
@@ -256,7 +256,7 @@ public final class SMGItemSetup {
                 new ItemStack(Material.GRASS_BLOCK), new ItemStack(Material.WHEAT_SEEDS), new ItemStack(Material.GRASS_BLOCK),
                 new ItemStack(Material.BONE_MEAL), SMGItems.SMG_GENERATOR_DIRT, new ItemStack(Material.BONE_MEAL),
                 new ItemStack(Material.GRASS_BLOCK), SlimefunItems.FERTILIZER, new ItemStack(Material.GRASS_BLOCK)
-            }, 12)
+            }, 20)
             .setItem(Material.GRASS_BLOCK)
             .register(plugin);
 
@@ -268,7 +268,7 @@ public final class SMGItemSetup {
                 new ItemStack(Material.CLAY), new ItemStack(Material.WATER_BUCKET), new ItemStack(Material.CLAY),
                 SlimefunItems.REDSTONE_ALLOY, SMGItems.SMG_GENERATOR_SAND, SlimefunItems.REDSTONE_ALLOY,
                 new ItemStack(Material.CLAY), new ItemStack(Material.WATER_BUCKET), new ItemStack(Material.CLAY)
-            }, 8)
+            }, 20)
             .setItem(Material.CLAY)
             .register(plugin);
 
@@ -280,7 +280,7 @@ public final class SMGItemSetup {
                 new ItemStack(Material.DIORITE), new ItemStack(Material.QUARTZ), new ItemStack(Material.DIORITE),
                 SlimefunItems.ALUMINUM_INGOT, SMGItems.SMG_GENERATOR_COBBLESTONE, SlimefunItems.ALUMINUM_INGOT,
                 new ItemStack(Material.DIORITE), new ItemStack(Material.QUARTZ), new ItemStack(Material.DIORITE)
-            }, 8)
+            }, 20)
             .setItem(Material.DIORITE)
             .register(plugin);
 
@@ -292,7 +292,7 @@ public final class SMGItemSetup {
                 new ItemStack(Material.GRANITE), new ItemStack(Material.QUARTZ), new ItemStack(Material.GRANITE),
                 SlimefunItems.COPPER_INGOT, SMGItems.SMG_GENERATOR_DIORITE, SlimefunItems.COPPER_INGOT,
                 new ItemStack(Material.GRANITE), new ItemStack(Material.QUARTZ), new ItemStack(Material.GRANITE)
-            }, 8)
+            }, 20)
             .setItem(Material.GRANITE)
             .register(plugin);
 
@@ -304,7 +304,7 @@ public final class SMGItemSetup {
                 new ItemStack(Material.SNOW_BLOCK), new ItemStack(Material.SNOWBALL), new ItemStack(Material.SNOW_BLOCK),
                 SlimefunItems.HARDENED_METAL_INGOT, SMGItems.SMG_GENERATOR_STONE, SlimefunItems.HARDENED_METAL_INGOT,
                 new ItemStack(Material.SNOW_BLOCK), new ItemStack(Material.WATER_BUCKET), new ItemStack(Material.SNOW_BLOCK)
-            }, 6)
+            }, 20)
             .setItem(Material.SNOW_BLOCK)
             .register(plugin);
 
@@ -316,7 +316,7 @@ public final class SMGItemSetup {
                 new ItemStack(Material.ICE), new ItemStack(Material.SNOW_BLOCK), new ItemStack(Material.ICE),
                 SlimefunItems.ALUMINUM_INGOT, SMGItems.SMG_GENERATOR_SNOW_BLOCK, SlimefunItems.ALUMINUM_INGOT,
                 new ItemStack(Material.ICE), new ItemStack(Material.WATER_BUCKET), new ItemStack(Material.ICE)
-            }, 10)
+            }, 20)
             .setItem(Material.ICE)
             .register(plugin);
 
@@ -328,7 +328,7 @@ public final class SMGItemSetup {
                 new ItemStack(Material.PACKED_ICE), new ItemStack(Material.ICE), new ItemStack(Material.PACKED_ICE),
                 SlimefunItems.DAMASCUS_STEEL_INGOT, SMGItems.SMG_GENERATOR_ICE, SlimefunItems.DAMASCUS_STEEL_INGOT,
                 new ItemStack(Material.PACKED_ICE), new ItemStack(Material.ICE), new ItemStack(Material.PACKED_ICE)
-            }, 16)
+            }, 20)
             .setItem(Material.PACKED_ICE)
             .register(plugin);
 
@@ -340,7 +340,7 @@ public final class SMGItemSetup {
                 new ItemStack(Material.BLUE_ICE), new ItemStack(Material.PACKED_ICE), new ItemStack(Material.BLUE_ICE),
                 SlimefunItems.STEEL_INGOT, SMGItems.SMG_GENERATOR_PACKED_ICE, SlimefunItems.STEEL_INGOT,
                 new ItemStack(Material.BLUE_ICE), SlimefunItems.COOLING_UNIT, new ItemStack(Material.BLUE_ICE)
-            }, 32)
+            }, 20)
             .setItem(Material.BLUE_ICE)
             .register(plugin);
 
@@ -352,7 +352,7 @@ public final class SMGItemSetup {
                 new ItemStack(Material.END_STONE), new ItemStack(Material.ENDER_PEARL), new ItemStack(Material.END_STONE),
                 SlimefunItems.REINFORCED_ALLOY_INGOT, SMGItems.SMG_GENERATOR_STONE, SlimefunItems.REINFORCED_ALLOY_INGOT,
                 new ItemStack(Material.END_STONE), new ItemStack(Material.ENDER_PEARL), new ItemStack(Material.END_STONE)
-            }, 16)
+            }, 20)
             .setItem(Material.END_STONE)
             .register(plugin);
     }
