@@ -46,6 +46,16 @@ There are generators for the following items:
 - Soul Sand
 - Redstone
 - Obsidian
+- Dirt
+- Grass Block
+- Clay Block
+- Diorite
+- Granite
+- Snow Block
+- Ice
+- Packed Ice
+- Blue Ice
+- End Stone
 
 More may be added in the future.
 

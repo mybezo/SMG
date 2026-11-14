@@ -235,5 +235,125 @@ public final class SMGItemSetup {
             }, 128)
             .setItem(Material.OBSIDIAN)
             .register(plugin);
+
+        new MaterialGenerator(
+            SMGItems.SMG_ITEM_CATEGORY,
+            SMGItems.SMG_GENERATOR_DIRT,
+            RecipeType.ENHANCED_CRAFTING_TABLE,
+            new ItemStack[] {
+                new ItemStack(Material.DIRT), new ItemStack(Material.DIRT), new ItemStack(Material.DIRT),
+                SlimefunItems.BRONZE_INGOT, SMGItems.SMG_GENERATOR_GRAVEL, SlimefunItems.BRONZE_INGOT,
+                new ItemStack(Material.DIRT), SlimefunItems.COMPOSTER, new ItemStack(Material.DIRT)
+            }, 6)
+            .setItem(Material.DIRT)
+            .register(plugin);
+
+        new MaterialGenerator(
+            SMGItems.SMG_ITEM_CATEGORY,
+            SMGItems.SMG_GENERATOR_GRASS_BLOCK,
+            RecipeType.ENHANCED_CRAFTING_TABLE,
+            new ItemStack[] {
+                new ItemStack(Material.GRASS_BLOCK), new ItemStack(Material.WHEAT_SEEDS), new ItemStack(Material.GRASS_BLOCK),
+                new ItemStack(Material.BONE_MEAL), SMGItems.SMG_GENERATOR_DIRT, new ItemStack(Material.BONE_MEAL),
+                new ItemStack(Material.GRASS_BLOCK), SlimefunItems.FERTILIZER, new ItemStack(Material.GRASS_BLOCK)
+            }, 12)
+            .setItem(Material.GRASS_BLOCK)
+            .register(plugin);
+
+        new MaterialGenerator(
+            SMGItems.SMG_ITEM_CATEGORY,
+            SMGItems.SMG_GENERATOR_CLAY,
+            RecipeType.ENHANCED_CRAFTING_TABLE,
+            new ItemStack[] {
+                new ItemStack(Material.CLAY), new ItemStack(Material.WATER_BUCKET), new ItemStack(Material.CLAY),
+                SlimefunItems.TIN_INGOT, SMGItems.SMG_GENERATOR_SAND, SlimefunItems.TIN_INGOT,
+                new ItemStack(Material.CLAY), new ItemStack(Material.WATER_BUCKET), new ItemStack(Material.CLAY)
+            }, 8)
+            .setItem(Material.CLAY)
+            .register(plugin);
+
+        new MaterialGenerator(
+            SMGItems.SMG_ITEM_CATEGORY,
+            SMGItems.SMG_GENERATOR_DIORITE,
+            RecipeType.ENHANCED_CRAFTING_TABLE,
+            new ItemStack[] {
+                new ItemStack(Material.DIORITE), new ItemStack(Material.QUARTZ), new ItemStack(Material.DIORITE),
+                SlimefunItems.ALUMINUM_INGOT, SMGItems.SMG_GENERATOR_COBBLESTONE, SlimefunItems.ALUMINUM_INGOT,
+                new ItemStack(Material.DIORITE), new ItemStack(Material.QUARTZ), new ItemStack(Material.DIORITE)
+            }, 8)
+            .setItem(Material.DIORITE)
+            .register(plugin);
+
+        new MaterialGenerator(
+            SMGItems.SMG_ITEM_CATEGORY,
+            SMGItems.SMG_GENERATOR_GRANITE,
+            RecipeType.ENHANCED_CRAFTING_TABLE,
+            new ItemStack[] {
+                new ItemStack(Material.GRANITE), new ItemStack(Material.QUARTZ), new ItemStack(Material.GRANITE),
+                SlimefunItems.COPPER_INGOT, SMGItems.SMG_GENERATOR_DIORITE, SlimefunItems.COPPER_INGOT,
+                new ItemStack(Material.GRANITE), new ItemStack(Material.QUARTZ), new ItemStack(Material.GRANITE)
+            }, 8)
+            .setItem(Material.GRANITE)
+            .register(plugin);
+
+        new MaterialGenerator(
+            SMGItems.SMG_ITEM_CATEGORY,
+            SMGItems.SMG_GENERATOR_SNOW_BLOCK,
+            RecipeType.ENHANCED_CRAFTING_TABLE,
+            new ItemStack[] {
+                new ItemStack(Material.SNOW_BLOCK), new ItemStack(Material.SNOWBALL), new ItemStack(Material.SNOW_BLOCK),
+                SlimefunItems.ZINC_INGOT, SMGItems.SMG_GENERATOR_STONE, SlimefunItems.ZINC_INGOT,
+                new ItemStack(Material.SNOW_BLOCK), new ItemStack(Material.WATER_BUCKET), new ItemStack(Material.SNOW_BLOCK)
+            }, 6)
+            .setItem(Material.SNOW_BLOCK)
+            .register(plugin);
+
+        new MaterialGenerator(
+            SMGItems.SMG_ITEM_CATEGORY,
+            SMGItems.SMG_GENERATOR_ICE,
+            RecipeType.ENHANCED_CRAFTING_TABLE,
+            new ItemStack[] {
+                new ItemStack(Material.ICE), new ItemStack(Material.SNOW_BLOCK), new ItemStack(Material.ICE),
+                SlimefunItems.ALUMINUM_INGOT, SMGItems.SMG_GENERATOR_SNOW_BLOCK, SlimefunItems.ALUMINUM_INGOT,
+                new ItemStack(Material.ICE), new ItemStack(Material.WATER_BUCKET), new ItemStack(Material.ICE)
+            }, 10)
+            .setItem(Material.ICE)
+            .register(plugin);
+
+        new MaterialGenerator(
+            SMGItems.SMG_ITEM_CATEGORY,
+            SMGItems.SMG_GENERATOR_PACKED_ICE,
+            RecipeType.ENHANCED_CRAFTING_TABLE,
+            new ItemStack[] {
+                new ItemStack(Material.PACKED_ICE), new ItemStack(Material.ICE), new ItemStack(Material.PACKED_ICE),
+                SlimefunItems.MAGNESIUM_INGOT, SMGItems.SMG_GENERATOR_ICE, SlimefunItems.MAGNESIUM_INGOT,
+                new ItemStack(Material.PACKED_ICE), new ItemStack(Material.ICE), new ItemStack(Material.PACKED_ICE)
+            }, 16)
+            .setItem(Material.PACKED_ICE)
+            .register(plugin);
+
+        new MaterialGenerator(
+            SMGItems.SMG_ITEM_CATEGORY,
+            SMGItems.SMG_GENERATOR_BLUE_ICE,
+            RecipeType.ENHANCED_CRAFTING_TABLE,
+            new ItemStack[] {
+                new ItemStack(Material.BLUE_ICE), new ItemStack(Material.PACKED_ICE), new ItemStack(Material.BLUE_ICE),
+                SlimefunItems.HARDENED_METAL_INGOT, SMGItems.SMG_GENERATOR_PACKED_ICE, SlimefunItems.HARDENED_METAL_INGOT,
+                new ItemStack(Material.BLUE_ICE), SlimefunItems.COOLING_UNIT, new ItemStack(Material.BLUE_ICE)
+            }, 32)
+            .setItem(Material.BLUE_ICE)
+            .register(plugin);
+
+        new MaterialGenerator(
+            SMGItems.SMG_ITEM_CATEGORY,
+            SMGItems.SMG_GENERATOR_END_STONE,
+            RecipeType.ENHANCED_CRAFTING_TABLE,
+            new ItemStack[] {
+                new ItemStack(Material.END_STONE), new ItemStack(Material.ENDER_PEARL), new ItemStack(Material.END_STONE),
+                SlimefunItems.ENDER_LUMP_2, SMGItems.SMG_GENERATOR_STONE, SlimefunItems.ENDER_LUMP_2,
+                new ItemStack(Material.END_STONE), new ItemStack(Material.ENDER_PEARL), new ItemStack(Material.END_STONE)
+            }, 16)
+            .setItem(Material.END_STONE)
+            .register(plugin);
     }
 }

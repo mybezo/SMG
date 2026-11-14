@@ -187,4 +187,94 @@ public final class SMGItems {
         "",
         "&9&oSimple Material Generators"
     );
+
+    public static final SlimefunItemStack SMG_GENERATOR_DIRT = new SlimefunItemStack(
+        "SMG_GENERATOR_DIRT",
+        Material.DIRT,
+        "&6Dirt Generator",
+        "&6Speed: &e6 t",
+        "",
+        "&9&oSimple Material Generators"
+    );
+
+    public static final SlimefunItemStack SMG_GENERATOR_GRASS_BLOCK = new SlimefunItemStack(
+        "SMG_GENERATOR_GRASS_BLOCK",
+        Material.GRASS_BLOCK,
+        "&aGrass Block Generator",
+        "&6Speed: &e12 t",
+        "",
+        "&9&oSimple Material Generators"
+    );
+
+    public static final SlimefunItemStack SMG_GENERATOR_CLAY = new SlimefunItemStack(
+        "SMG_GENERATOR_CLAY",
+        Material.CLAY,
+        "&7Clay Block Generator",
+        "&6Speed: &e8 t",
+        "",
+        "&9&oSimple Material Generators"
+    );
+
+    public static final SlimefunItemStack SMG_GENERATOR_DIORITE = new SlimefunItemStack(
+        "SMG_GENERATOR_DIORITE",
+        Material.DIORITE,
+        "&fDiorite Generator",
+        "&6Speed: &e8 t",
+        "",
+        "&9&oSimple Material Generators"
+    );
+
+    public static final SlimefunItemStack SMG_GENERATOR_GRANITE = new SlimefunItemStack(
+        "SMG_GENERATOR_GRANITE",
+        Material.GRANITE,
+        "&6Granite Generator",
+        "&6Speed: &e8 t",
+        "",
+        "&9&oSimple Material Generators"
+    );
+
+    public static final SlimefunItemStack SMG_GENERATOR_SNOW_BLOCK = new SlimefunItemStack(
+        "SMG_GENERATOR_SNOW_BLOCK",
+        Material.SNOW_BLOCK,
+        "&fSnow Block Generator",
+        "&6Speed: &e6 t",
+        "",
+        "&9&oSimple Material Generators"
+    );
+
+    public static final SlimefunItemStack SMG_GENERATOR_ICE = new SlimefunItemStack(
+        "SMG_GENERATOR_ICE",
+        Material.ICE,
+        "&bIce Generator",
+        "&6Speed: &e10 t",
+        "",
+        "&9&oSimple Material Generators"
+    );
+
+    public static final SlimefunItemStack SMG_GENERATOR_PACKED_ICE = new SlimefunItemStack(
+        "SMG_GENERATOR_PACKED_ICE",
+        Material.PACKED_ICE,
+        "&bPacked Ice Generator",
+        "&6Speed: &e16 t",
+        "",
+        "&9&oSimple Material Generators"
+    );
+
+    public static final SlimefunItemStack SMG_GENERATOR_BLUE_ICE = new SlimefunItemStack(
+        "SMG_GENERATOR_BLUE_ICE",
+        Material.BLUE_ICE,
+        "&9Blue Ice Generator",
+        "&6Speed: &e32 t",
+        "",
+        "&9&oSimple Material Generators"
+    );
+
+    public static final SlimefunItemStack SMG_GENERATOR_END_STONE = new SlimefunItemStack(
+        "SMG_GENERATOR_END_STONE",
+        Material.END_STONE,
+        "&eEnd Stone Generator",
+        "&6Speed: &e16 t",
+        "",
+        "&9&oSimple Material Generators"
+    );
 }
