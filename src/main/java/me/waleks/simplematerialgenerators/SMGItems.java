@@ -12,7 +12,7 @@ public final class SMGItems {
 
     public static final ItemGroup SMG_ITEM_CATEGORY = new ItemGroup(
         new NamespacedKey(SimpleMaterialGenerators.getInstance(), "simplematerialgenerators"),
-        CustomItemStack.create(Material.SMOOTH_STONE, "&9Simple Material Generators")
+        new CustomItemStack(Material.SMOOTH_STONE, "&9Simple Material Generators")
     );
 
     public static final SlimefunItemStack SMG_GENERATOR_MULTIBLOCK = new SlimefunItemStack(

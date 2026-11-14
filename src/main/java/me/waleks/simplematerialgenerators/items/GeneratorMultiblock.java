@@ -20,7 +20,7 @@ public class GeneratorMultiblock extends SimpleSlimefunItem<ItemUseHandler> impl
         super(itemGroup, item, RecipeType.MULTIBLOCK, new ItemStack[] {
                 null, null, null,
                 null, new ItemStack(Material.CHEST), null,
-                null, CustomItemStack.create(Material.BEDROCK, "&9Any Material Generator"), null
+                null, new CustomItemStack(Material.BEDROCK, "&9Any Material Generator"), null
         });
     }
 

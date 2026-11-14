@@ -19,7 +19,5 @@ jobs:
           distribution: 'temurin'
           java-version: 25
           cache: 'maven'
-      - name: Install Slimefun
-        run: scripts/install-slimefun.sh
       - name: Build with Maven
         run: mvn package --file pom.xml

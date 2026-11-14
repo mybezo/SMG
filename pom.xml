@@ -8,13 +8,17 @@
     <version>UNOFFICIAL</version>
 
     <properties>
-        <!-- Same bytecode level as Slimefun itself (Minecraft 1.16+) -->
-        <maven.compiler.source>16</maven.compiler.source>
-        <maven.compiler.target>16</maven.compiler.target>
+        <!-- Same Java level as Slimefun itself -->
+        <maven.compiler.release>21</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <repositories>
+        <repository>
+            <id>norain-snapshots</id>
+            <url>https://maven.norain.city/snapshots</url>
+        </repository>
+
         <repository>
             <id>paper-repo</id>
             <url>https://repo.papermc.io/repository/maven-public/</url>
@@ -25,16 +29,15 @@
         <dependency>
             <groupId>io.papermc.paper</groupId>
             <artifactId>paper-api</artifactId>
-            <version>1.21.1-R0.1-SNAPSHOT</version>
+            <version>1.21.11-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
 
         <dependency>
-            <!-- Slimefun "experimental" branch (Minecraft 1.21 support).
-                 JitPack cannot build it, run scripts/install-slimefun.sh first. -->
+            <!-- SlimefunGuguProject's Slimefun4 (Minecraft 1.16 - 26.3) -->
             <groupId>com.github.slimefun</groupId>
             <artifactId>Slimefun</artifactId>
-            <version>4.9-UNOFFICIAL</version>
+            <version>DEV-SNAPSHOT</version>
             <scope>provided</scope>
             <exclusions>
                 <!-- dough and the other libraries are already shaded into the Slimefun jar -->

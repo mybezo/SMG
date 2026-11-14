@@ -5,9 +5,13 @@ materials: material generators produce them for you instead.
 
 ## Requirements
 
-- [Slimefun4](https://github.com/Slimefun/Slimefun4) — built against the latest official
-  build from the `experimental` branch (Minecraft 1.16 – 1.21.x)
+- [SlimefunGuguProject's Slimefun4](https://github.com/SlimefunGuguProject/Slimefun4)
+  (Minecraft 1.16 - 26.3), download it from [resources.guizhanss.com](https://resources.guizhanss.com/plugin/Slimefun4)
+- Java 21 or newer
 - A Spigot or Paper server supported by that Slimefun build
+
+The official Slimefun4 is not supported: this addon uses the block storage API of the
+SlimefunGuguProject fork.
 
 ## Usage
 
@@ -38,11 +42,7 @@ More may be added in the future.
 
 ## Building
 
-The newest Slimefun builds cannot be fetched from JitPack, so install Slimefun into your
-local Maven repository first, then build the addon:
-
 ```sh
-scripts/install-slimefun.sh
 mvn package
 ```
 
