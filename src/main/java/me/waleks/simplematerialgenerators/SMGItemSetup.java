@@ -266,7 +266,7 @@ public final class SMGItemSetup {
             RecipeType.ENHANCED_CRAFTING_TABLE,
             new ItemStack[] {
                 new ItemStack(Material.CLAY), new ItemStack(Material.WATER_BUCKET), new ItemStack(Material.CLAY),
-                SlimefunItems.TIN_INGOT, SMGItems.SMG_GENERATOR_SAND, SlimefunItems.TIN_INGOT,
+                SlimefunItems.REDSTONE_ALLOY, SMGItems.SMG_GENERATOR_SAND, SlimefunItems.REDSTONE_ALLOY,
                 new ItemStack(Material.CLAY), new ItemStack(Material.WATER_BUCKET), new ItemStack(Material.CLAY)
             }, 8)
             .setItem(Material.CLAY)
@@ -302,7 +302,7 @@ public final class SMGItemSetup {
             RecipeType.ENHANCED_CRAFTING_TABLE,
             new ItemStack[] {
                 new ItemStack(Material.SNOW_BLOCK), new ItemStack(Material.SNOWBALL), new ItemStack(Material.SNOW_BLOCK),
-                SlimefunItems.ZINC_INGOT, SMGItems.SMG_GENERATOR_STONE, SlimefunItems.ZINC_INGOT,
+                SlimefunItems.HARDENED_METAL_INGOT, SMGItems.SMG_GENERATOR_STONE, SlimefunItems.HARDENED_METAL_INGOT,
                 new ItemStack(Material.SNOW_BLOCK), new ItemStack(Material.WATER_BUCKET), new ItemStack(Material.SNOW_BLOCK)
             }, 6)
             .setItem(Material.SNOW_BLOCK)
@@ -326,7 +326,7 @@ public final class SMGItemSetup {
             RecipeType.ENHANCED_CRAFTING_TABLE,
             new ItemStack[] {
                 new ItemStack(Material.PACKED_ICE), new ItemStack(Material.ICE), new ItemStack(Material.PACKED_ICE),
-                SlimefunItems.MAGNESIUM_INGOT, SMGItems.SMG_GENERATOR_ICE, SlimefunItems.MAGNESIUM_INGOT,
+                SlimefunItems.DAMASCUS_STEEL_INGOT, SMGItems.SMG_GENERATOR_ICE, SlimefunItems.DAMASCUS_STEEL_INGOT,
                 new ItemStack(Material.PACKED_ICE), new ItemStack(Material.ICE), new ItemStack(Material.PACKED_ICE)
             }, 16)
             .setItem(Material.PACKED_ICE)
@@ -338,7 +338,7 @@ public final class SMGItemSetup {
             RecipeType.ENHANCED_CRAFTING_TABLE,
             new ItemStack[] {
                 new ItemStack(Material.BLUE_ICE), new ItemStack(Material.PACKED_ICE), new ItemStack(Material.BLUE_ICE),
-                SlimefunItems.HARDENED_METAL_INGOT, SMGItems.SMG_GENERATOR_PACKED_ICE, SlimefunItems.HARDENED_METAL_INGOT,
+                SlimefunItems.STEEL_INGOT, SMGItems.SMG_GENERATOR_PACKED_ICE, SlimefunItems.STEEL_INGOT,
                 new ItemStack(Material.BLUE_ICE), SlimefunItems.COOLING_UNIT, new ItemStack(Material.BLUE_ICE)
             }, 32)
             .setItem(Material.BLUE_ICE)
@@ -350,7 +350,7 @@ public final class SMGItemSetup {
             RecipeType.ENHANCED_CRAFTING_TABLE,
             new ItemStack[] {
                 new ItemStack(Material.END_STONE), new ItemStack(Material.ENDER_PEARL), new ItemStack(Material.END_STONE),
-                SlimefunItems.ENDER_LUMP_2, SMGItems.SMG_GENERATOR_STONE, SlimefunItems.ENDER_LUMP_2,
+                SlimefunItems.REINFORCED_ALLOY_INGOT, SMGItems.SMG_GENERATOR_STONE, SlimefunItems.REINFORCED_ALLOY_INGOT,
                 new ItemStack(Material.END_STONE), new ItemStack(Material.ENDER_PEARL), new ItemStack(Material.END_STONE)
             }, 16)
             .setItem(Material.END_STONE)
