@@ -28,7 +28,7 @@
 |---|---|
 | **Server** | Spigot or Paper, Minecraft **1.16 – 26.3** |
 | **Java** | **21** or newer |
-| **Slimefun** | [SlimefunGuguProject's Slimefun4](https://github.com/SlimefunGuguProject/Slimefun4), download it from [resources.guizhanss.com](https://resources.guizhanss.com/plugin/Slimefun4) |
+| **Slimefun** | [Slimefun4-Gugu](https://github.com/mybezo/Slimefun4-Gugu), download it from [resources.guizhanss.com](https://resources.guizhanss.com/plugin/Slimefun4) |
 
 > [!IMPORTANT]
 > The official Slimefun4 is **not** supported. This addon uses the block storage API
@@ -36,7 +36,7 @@
 
 ## 🚀 Installation
 
-1. Install SlimefunGuguProject's Slimefun4.
+1. Install [Slimefun4-Gugu](https://github.com/mybezo/Slimefun4-Gugu).
 2. Put `SimpleMaterialGenerators.jar` in your server's `plugins` folder.
 3. Restart the server.
 4. Find the generators in the Slimefun Guide under **Simple Material Generators**.
