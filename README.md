@@ -18,7 +18,7 @@
 - **20 generators** for building blocks, ice, stone variants and more
 - **Built-in 54-slot inventory**: no chest or multiblock needed, just place the generator
 - **Cargo support**: pull the output with Slimefun cargo nodes
-- **[Networks](https://github.com/SlimefunGuguProject/Networks) support**: Network Grabbers and other network blocks can pull the output
+- **[Networks Expansion](https://github.com/mybezo/NetworksExpansion) support**: Network Grabbers and other network blocks can pull the output
 - **Progression**: most generators are crafted from earlier ones
 - **Configurable speed** for every generator
 
