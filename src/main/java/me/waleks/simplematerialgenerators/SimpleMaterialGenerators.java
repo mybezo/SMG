@@ -16,6 +16,7 @@ public class SimpleMaterialGenerators extends JavaPlugin implements SlimefunAddo
         setInstance(this);
 
         SMGItemSetup.setup(this);
+        SMGItems.SMG_MAIN_GROUP.addGroup(SMGItems.SMG_ITEM_CATEGORY);
         CompressedSetup.setup(this);
         SMGItems.SMG_MAIN_GROUP.register(this);
     }

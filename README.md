@@ -40,7 +40,7 @@
 1. Install [Slimefun4-Gugu](https://github.com/mybezo/Slimefun4-Gugu).
 2. Put `SimpleMaterialGenerators.jar` in your server's `plugins` folder.
 3. Restart the server.
-4. Find the generators in the Slimefun Guide under **Simple Material Generators**.
+4. Find the generators in the Slimefun Guide under **Simple Material Generators** > **Material Generator**.
 
 ## 🎮 How it works
 
@@ -128,18 +128,18 @@ four compressed versions, crafted in the Slimefun **Compressor**:
 
 | Version | Recipe | Items per cycle |
 |---|---|:---:|
-| `Cobblestone Generator (8)` | 8× the original generator | 8 |
-| `Cobblestone Generator (16)` | 2× the (8) version | 16 |
-| `Cobblestone Generator (32)` | 2× the (16) version | 32 |
-| `Cobblestone Generator (64)` | 2× the (32) version | 64 |
+| Cobblestone Generator (8) | 8× the original generator | 8 |
+| Cobblestone Generator (16) | 2× the (8) version | 16 |
+| Cobblestone Generator (32) | 2× the (16) version | 32 |
+| Cobblestone Generator (64) | 2× the (32) version | 64 |
 
 - It runs at the same speed as the original generator and follows its `rate` setting.
 - Every cycle produces as many items as its multiplier, split into valid stacks. If the output
   has less room, only what fits is produced, so no items are lost.
 - IDs are the original ID plus `_X8`, `_X16`, `_X32` or `_X64`, for example
   `SMG_GENERATOR_COBBLESTONE_X64`.
-- In the guide, open the addon and click **Compressed Items** (slot 40). Only the highest
-  enabled version is listed. The lower versions are still craftable, click them in a recipe
+- In the guide, open **Simple Material Generators** and click **Compressed Items** (slot 40).
+  Only the highest enabled version is listed. The lower versions are still craftable, click them in a recipe
   to view them.
 
 Compressed generators are configured in `plugins/SimpleMaterialGenerators/compressed.yml`:

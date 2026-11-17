@@ -115,11 +115,12 @@ public final class CompressedSetup {
                 "&7Several generators combined into one",
                 "",
                 "&a> Click to open"
-            )
+            ),
+            false
         );
         compressedItems.addGroup(generatorsGroup);
         compressedItems.register(plugin);
-        SMGItems.SMG_MAIN_GROUP.setButton(COMPRESSED_ITEMS_SLOT, compressedItems);
+        SMGItems.SMG_MAIN_GROUP.setFixedGroup(COMPRESSED_ITEMS_SLOT, compressedItems);
 
         plugin.getLogger().log(Level.INFO, "Registered {0} compressed generators.", count);
     }
@@ -161,15 +162,15 @@ public final class CompressedSetup {
     }
 
     /**
-     * The name is "&a<original name> (N)", the lore is the original lore plus the combined amount.
+     * The name is "<original name> &a(N)", the lore is the original lore plus the combined amount.
      */
     @Nonnull
     private static SlimefunItemStack createItemStack(@Nonnull MaterialGenerator generator, int multiplier) {
         ItemStack item = generator.getItem().clone();
         ItemMeta meta = item.getItemMeta();
 
-        String name = ChatColor.stripColor(generator.getItemName());
-        meta.setDisplayName(ChatColor.GREEN + name + " (" + multiplier + ")");
+        // only the multiplier at the end is green, the name keeps its color
+        meta.setDisplayName(generator.getItemName() + " " + ChatColor.GREEN + "(" + multiplier + ")");
 
         List<String> lore = meta.hasLore() ? new ArrayList<>(meta.getLore()) : new ArrayList<>();
         lore.add(Math.min(1, lore.size()), ChatColor.GRAY + "Combines " + multiplier + " machines into one.");

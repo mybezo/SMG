@@ -4,28 +4,25 @@ import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 import me.waleks.simplematerialgenerators.guide.HiddenItemGroup;
-import me.waleks.simplematerialgenerators.guide.MainItemGroup;
+import me.waleks.simplematerialgenerators.guide.GroupListItemGroup;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
-import org.bukkit.inventory.ItemStack;
 
 public final class SMGItems {
 
     private SMGItems() {}
 
-    private static final ItemStack CATEGORY_ICON = new CustomItemStack(Material.SMOOTH_STONE, "&9Simple Material Generators");
-
-    // holds the items, they are listed in the guide by SMG_MAIN_GROUP
+    // "Material Generator": the normal generators, listed in the addon's menu
     public static final ItemGroup SMG_ITEM_CATEGORY = new HiddenItemGroup(
         new NamespacedKey(SimpleMaterialGenerators.getInstance(), "simplematerialgenerators"),
-        CATEGORY_ICON
+        new CustomItemStack(Material.SMOOTH_STONE, "&9Material Generator")
     );
 
-    // the addon's entry in the guide, with the "Compressed Items" button
-    public static final MainItemGroup SMG_MAIN_GROUP = new MainItemGroup(
+    // the addon's entry in the guide, lists its categories ("Compressed Items" at a fixed slot)
+    public static final GroupListItemGroup SMG_MAIN_GROUP = new GroupListItemGroup(
         new NamespacedKey(SimpleMaterialGenerators.getInstance(), "main"),
-        CATEGORY_ICON,
-        SMG_ITEM_CATEGORY
+        new CustomItemStack(Material.SMOOTH_STONE, "&9Simple Material Generators"),
+        true
     );
 
 	/*	Template for adding more generator items
