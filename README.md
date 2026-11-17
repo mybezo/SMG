@@ -21,6 +21,7 @@
 - **[Networks Expansion](https://github.com/mybezo/NetworksExpansion) support**: Network Grabbers and other network blocks can pull the output
 - **Progression**: most generators are crafted from earlier ones
 - **Configurable speed** for every generator
+- **Compressed generators**: up to 64 generators combined into one block
 
 ## 📦 Requirements
 
@@ -119,6 +120,43 @@ flowchart LR
 ```
 
 <sub>✗ = Broken, ? = Badly Formed</sub>
+
+## 🗜️ Compressed generators
+
+A compressed generator combines several generators into one block. Every generator has
+four compressed versions, crafted in the Slimefun **Compressor**:
+
+| Version | Recipe | Items per cycle |
+|---|---|:---:|
+| `Cobblestone Generator (8)` | 8× the original generator | 8 |
+| `Cobblestone Generator (16)` | 2× the (8) version | 16 |
+| `Cobblestone Generator (32)` | 2× the (16) version | 32 |
+| `Cobblestone Generator (64)` | 2× the (32) version | 64 |
+
+- It runs at the same speed as the original generator and follows its `rate` setting.
+- Every cycle produces as many items as its multiplier, split into valid stacks. If the output
+  has less room, only what fits is produced, so no items are lost.
+- IDs are the original ID plus `_X8`, `_X16`, `_X32` or `_X64`, for example
+  `SMG_GENERATOR_COBBLESTONE_X64`.
+- In the guide, open the addon and click **Compressed Items** (slot 40). Only the highest
+  enabled version is listed. The lower versions are still craftable, click them in a recipe
+  to view them.
+
+Compressed generators are configured in `plugins/SimpleMaterialGenerators/compressed.yml`:
+
+```yaml
+enabled: true          # all compressed generators
+multipliers:           # disabling one also disables every higher one
+  x8: true
+  x16: true
+  x32: true
+  x64: true
+generators:            # per original generator
+  SMG_GENERATOR_COBBLESTONE: true
+  # ...
+```
+
+Missing options are added to an existing file automatically. Changes need a server restart.
 
 ## ⚙️ Configuration
 

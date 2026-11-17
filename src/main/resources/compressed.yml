@@ -1,0 +1,51 @@
+# Compressed Generator settings
+# A compressed generator combines several generators into one.
+# It runs at the speed of the original generator (its "rate" in plugins/Slimefun/Items.yml),
+# and every cycle produces as many items as the multiplier, as long as they fit into the output.
+#
+# Recipes (Compressor):
+#   x8  = 8 of the original generator
+#   x16 = 2 of the x8 generator
+#   x32 = 2 of the x16 generator
+#   x64 = 2 of the x32 generator
+#
+# Only the highest enabled multiplier is listed in the guide,
+# the lower multipliers are still craftable (click them in the recipe to view).
+#
+# Changes require a server restart.
+# Missing options are added automatically, existing values are kept.
+
+# Enable/disable all the compressed generators
+enabled: true
+
+# Enable/disable each multiplier.
+# Disabling a multiplier also disables all the multipliers above it,
+# because their recipes need the previous multiplier.
+multipliers:
+  x8: true
+  x16: true
+  x32: true
+  x64: true
+
+# Enable/disable the compressed versions (all multipliers) of each generator
+generators:
+  SMG_GENERATOR_COBBLESTONE: true
+  SMG_GENERATOR_STONE: true
+  SMG_GENERATOR_SMOOTH_STONE: true
+  SMG_GENERATOR_GRAVEL: true
+  SMG_GENERATOR_SAND: true
+  SMG_GENERATOR_GLASS: true
+  SMG_GENERATOR_NETHERRACK: true
+  SMG_GENERATOR_SOUL_SAND: true
+  SMG_GENERATOR_REDSTONE: true
+  SMG_GENERATOR_OBSIDIAN: true
+  SMG_GENERATOR_DIRT: true
+  SMG_GENERATOR_GRASS_BLOCK: true
+  SMG_GENERATOR_CLAY: true
+  SMG_GENERATOR_DIORITE: true
+  SMG_GENERATOR_GRANITE: true
+  SMG_GENERATOR_SNOW_BLOCK: true
+  SMG_GENERATOR_ICE: true
+  SMG_GENERATOR_PACKED_ICE: true
+  SMG_GENERATOR_BLUE_ICE: true
+  SMG_GENERATOR_END_STONE: true

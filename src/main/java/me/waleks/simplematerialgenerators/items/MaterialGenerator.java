@@ -8,6 +8,7 @@ import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.items.settings.IntRangeSetting;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
+import io.github.thebusybiscuit.slimefun4.core.attributes.RecipeDisplayItem;
 import io.github.thebusybiscuit.slimefun4.core.handlers.BlockBreakHandler;
 import io.github.thebusybiscuit.slimefun4.implementation.handlers.SimpleBlockBreakHandler;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
@@ -26,15 +27,21 @@ import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.ItemStack;
 
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.Collections;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * A generator that produces one material into its own 54 slot inventory.
  * The output slots can be emptied by players, Slimefun cargo and Networks.
+ * <p>
+ * A compressed generator combines several generators into one: it runs at the speed of
+ * the original generator, and every finished cycle produces {@code multiplier} items at once.
  */
-public class MaterialGenerator extends SlimefunItem implements InventoryBlock {
+public class MaterialGenerator extends SlimefunItem implements InventoryBlock, RecipeDisplayItem {
 
     private static final int STATUS_SLOT = 4;
     private static final int[] BACKGROUND_SLOTS = {0, 1, 2, 3, 5, 6, 7, 8};
@@ -47,14 +54,66 @@ public class MaterialGenerator extends SlimefunItem implements InventoryBlock {
     }
 
     private final Map<Location, Integer> progress = new ConcurrentHashMap<>();
+    @Nullable
     private final ItemSetting<Integer> rate;
+    // the original generator of a compressed generator, it decides the speed
+    @Nullable
+    private final MaterialGenerator base;
+    private final int multiplier;
     private ItemStack item;
 
     @ParametersAreNonnullByDefault
     public MaterialGenerator(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe, int defaultRate) {
         super(itemGroup, item, recipeType, recipe);
         this.rate = new IntRangeSetting(this, "rate", 1, defaultRate, 1000);
+        this.base = null;
+        this.multiplier = 1;
         addItemSetting(this.rate);
+    }
+
+    /**
+     * Creates a compressed version of the given generator, which produces {@code multiplier} items per cycle.
+     */
+    @ParametersAreNonnullByDefault
+    public MaterialGenerator(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe,
+                             MaterialGenerator base, int multiplier) {
+        super(itemGroup, item, recipeType, recipe);
+        this.rate = null;
+        this.base = base;
+        this.multiplier = multiplier;
+        this.item = base.item == null ? null : base.item.clone();
+    }
+
+    /**
+     * The amount of generators combined into this one, 1 for a normal generator.
+     */
+    public int getMultiplier() {
+        return multiplier;
+    }
+
+    /**
+     * The ticks per cycle. A compressed generator uses the setting of its original generator.
+     */
+    public int getRate() {
+        if (base != null) {
+            return base.getRate();
+        }
+        return rate == null ? 1 : rate.getValue();
+    }
+
+    @Nonnull
+    @Override
+    public List<ItemStack> getDisplayRecipes() {
+        if (multiplier <= 1) {
+            return Collections.emptyList();
+        }
+        Material icon = this.item == null ? Material.BARRIER : this.item.getType();
+        return Collections.singletonList(new CustomItemStack(icon,
+            "&aMultiplier: &ex" + multiplier,
+            "",
+            "&7Combines " + multiplier + " generators into one.",
+            "&7Produces &e" + multiplier + " &7items per cycle."
+        ));
     }
 
     @Override
@@ -138,21 +197,65 @@ public class MaterialGenerator extends SlimefunItem implements InventoryBlock {
         }
 
         Location l = b.getLocation();
-        int total = this.rate.getValue();
-
-        if (!menu.fits(this.item, OUTPUT_SLOTS)) {
-            updateStatus(menu, progress.getOrDefault(l, 0), true);
-            return;
-        }
-
+        int total = getRate();
         int current = progress.getOrDefault(l, 0) + 1;
+
+        // the free space is only counted when a cycle is finished
         if (current >= total) {
-            menu.pushItem(this.item.clone(), OUTPUT_SLOTS);
+            int space = getFreeSpace(menu);
+
+            if (space <= 0) {
+                // wait at the end of the cycle until there is room
+                progress.put(l, total);
+                updateStatus(menu, total, true);
+                return;
+            }
+
+            // only produce what fits, so no items are lost
+            output(menu, Math.min(multiplier, space));
             current = 0;
         }
 
         progress.put(l, current);
         updateStatus(menu, current, false);
+    }
+
+    /**
+     * Counts how many output items still fit into the output slots, at most {@code multiplier}.
+     */
+    private int getFreeSpace(@Nonnull BlockMenu menu) {
+        int maxStack = this.item.getMaxStackSize();
+        int space = 0;
+
+        for (int slot : OUTPUT_SLOTS) {
+            ItemStack stack = menu.getItemInSlot(slot);
+            if (stack == null || stack.getType() == Material.AIR) {
+                space += maxStack;
+            } else if (stack.isSimilar(this.item)) {
+                space += Math.max(0, maxStack - stack.getAmount());
+            }
+
+            if (space >= multiplier) {
+                return multiplier;
+            }
+        }
+
+        return space;
+    }
+
+    /**
+     * Puts the given amount of items into the output slots, split into valid stacks.
+     */
+    private void output(@Nonnull BlockMenu menu, int amount) {
+        int maxStack = this.item.getMaxStackSize();
+
+        while (amount > 0) {
+            int size = Math.min(amount, maxStack);
+            ItemStack stack = this.item.clone();
+            stack.setAmount(size);
+            menu.pushItem(stack, OUTPUT_SLOTS);
+            amount -= size;
+        }
     }
 
     private void updateStatus(@Nonnull BlockMenu menu, int current, boolean full) {
@@ -169,8 +272,8 @@ public class MaterialGenerator extends SlimefunItem implements InventoryBlock {
             return new CustomItemStack(icon, "&cOutput is full", "", "&7Empty the generator to continue");
         }
 
-        int total = this.rate.getValue();
-        return new CustomItemStack(icon, "&aGenerating...", "", "&7Progress: &e" + current + "&7/&e" + total + " t");
+        String output = multiplier > 1 ? "&7Output: &e" + multiplier + " &7items per cycle" : "&7Output: &e1 &7item per cycle";
+        return new CustomItemStack(icon, "&aGenerating...", "", "&7Progress: &e" + current + "&7/&e" + getRate() + " t", output);
     }
 
     public final MaterialGenerator setItem(@Nonnull Material material) {
