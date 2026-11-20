@@ -255,7 +255,7 @@ public final class SMGItemSetup {
             new ItemStack[] {
                 new ItemStack(Material.GRASS_BLOCK), new ItemStack(Material.WHEAT_SEEDS), new ItemStack(Material.GRASS_BLOCK),
                 new ItemStack(Material.BONE_MEAL), SMGItems.SMG_GENERATOR_DIRT, new ItemStack(Material.BONE_MEAL),
-                new ItemStack(Material.GRASS_BLOCK), SlimefunItems.FERTILIZER, new ItemStack(Material.GRASS_BLOCK)
+                new ItemStack(Material.GRASS_BLOCK), new ItemStack(Material.WATER_BUCKET), new ItemStack(Material.GRASS_BLOCK)
             }, 20)
             .setItem(Material.GRASS_BLOCK)
             .register(plugin);

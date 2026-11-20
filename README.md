@@ -81,7 +81,7 @@ Speed is measured in Slimefun ticks. With Slimefun's default settings, 1 tick = 
 | Redstone | 24 t | 12 s | 300 | Enhanced Crafting Table | 4× Redstone Generator *(Broken)*, Gravel Generator, Damascus Steel, Duralumin |
 | Obsidian | 128 t | 64 s | ≈56 | Enhanced Crafting Table | 4× Obsidian Generator *(Broken)*, Stone Generator, Reinforced Alloy Ingot |
 | Dirt | 20 t | 10 s | 360 | Enhanced Crafting Table | Gravel Generator, Dirt, Bronze Ingot, Composter |
-| Grass Block | 20 t | 10 s | 360 | Enhanced Crafting Table | Dirt Generator, Grass Block, Wheat Seeds, Bone Meal, Fertilizer |
+| Grass Block | 20 t | 10 s | 360 | Enhanced Crafting Table | Dirt Generator, Grass Block, Wheat Seeds, Bone Meal, Water Bucket |
 | Clay Block | 20 t | 10 s | 360 | Enhanced Crafting Table | Sand Generator, Clay, Water Bucket, Redstone Alloy Ingot |
 | Diorite | 20 t | 10 s | 360 | Enhanced Crafting Table | Cobblestone Generator, Diorite, Quartz, Aluminum Ingot |
 | Granite | 20 t | 10 s | 360 | Enhanced Crafting Table | Diorite Generator, Granite, Quartz, Copper Ingot |
