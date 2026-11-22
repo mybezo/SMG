@@ -2,6 +2,7 @@ package me.waleks.simplematerialgenerators;
 
 import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
 import me.waleks.simplematerialgenerators.compressed.CompressedSetup;
+import me.waleks.simplematerialgenerators.listeners.GeneratorFadeListener;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import javax.annotation.Nonnull;
@@ -19,6 +20,8 @@ public class SimpleMaterialGenerators extends JavaPlugin implements SlimefunAddo
         SMGItems.SMG_MAIN_GROUP.addGroup(SMGItems.SMG_ITEM_CATEGORY);
         CompressedSetup.setup(this);
         SMGItems.SMG_MAIN_GROUP.register(this);
+
+        new GeneratorFadeListener(this);
     }
 
     @Override
