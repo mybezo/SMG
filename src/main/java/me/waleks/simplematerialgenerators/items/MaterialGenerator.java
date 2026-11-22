@@ -19,6 +19,7 @@ import me.mrCookieSlime.Slimefun.Objects.SlimefunItem.interfaces.InventoryBlock;
 import me.mrCookieSlime.Slimefun.Objects.handlers.BlockTicker;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenu;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenuPreset;
+import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
@@ -164,6 +165,15 @@ public class MaterialGenerator extends SlimefunItem implements InventoryBlock, R
                 BlockMenu menu = StorageCacheUtils.getMenu(b.getLocation());
                 if (menu != null) {
                     menu.dropItems(b.getLocation(), OUTPUT_SLOTS);
+                }
+
+                // vanilla turns broken ice into water (without Silk Touch), remove that water
+                if (b.getType() == Material.ICE) {
+                    Bukkit.getScheduler().runTask(getAddon().getJavaPlugin(), () -> {
+                        if (b.getType() == Material.WATER) {
+                            b.setType(Material.AIR);
+                        }
+                    });
                 }
             }
         };
